@@ -14,7 +14,7 @@ export const allProjects = [
       title: "Project Two",
       description: "The second project.",
       goal: 150,
-      image: "https://via.placeholder.com/300.jpg",
+      image: "https://i.guim.co.uk/img/media/20098ae982d6b3ba4d70ede3ef9b8f79ab1205ce/0_0_969_1005/master/969.jpg?width=700&quality=85&auto=format&fit=max&s=470657ebd2a0e704df88997d393aea15",
       is_open: false,
       date_created: "2020-03-20T18:28:23.382748Z",
       owner: 1,

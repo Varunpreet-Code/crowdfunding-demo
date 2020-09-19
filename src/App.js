@@ -1,8 +1,10 @@
 import React from "react";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import "./App.css";
 import HomePage from './pages/HomePage';
 import ProjectPage from './pages/ProjectPage';
 import Nav from './components/Nav/Nav';
+import ProjectCard from './components/ProjectCard/ProjectCard';
 
 
 
