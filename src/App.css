@@ -10,6 +10,7 @@
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+    
   }
 }
 
@@ -43,4 +44,6 @@
   column-gap: 10px;
   row-gap: 10px;
  }
+
+ 
  

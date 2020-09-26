@@ -5,6 +5,8 @@ import HomePage from './pages/HomePage';
 import ProjectPage from './pages/ProjectPage';
 import Nav from './components/Nav/Nav';
 import ProjectCard from './components/ProjectCard/ProjectCard';
+import LoginPage from "./pages/LoginPage";
+import SignUpPage from "./pages/SignUpPage";
 
 
 
@@ -19,14 +21,22 @@ function App() {
             <ProjectPage />
           
           </Route>
-
+          <Route path="/Login">
+            <LoginPage />
+          </Route>
+          <Route path="/SignUp">
+            <SignUpPage />
+          </Route>
           <Route path="/">
             <HomePage />
           </Route>
+          
         </Switch>
       </div>
     </Router>
   )
 }
+
+  
 
 export default App;
