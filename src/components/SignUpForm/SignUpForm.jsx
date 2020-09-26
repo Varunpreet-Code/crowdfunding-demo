@@ -37,6 +37,11 @@ function SignUpForm() {
       postData().then((response) => {
         window.localStorage.setItem("token", response.token);
         history.push("/");
+
+      });
+      .catch((error) => {
+        alert("username taken");
+
       });
     }
   };
