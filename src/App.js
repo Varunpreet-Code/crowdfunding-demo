@@ -7,6 +7,7 @@ import Nav from './components/Nav/Nav';
 import ProjectCard from './components/ProjectCard/ProjectCard';
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
+import About from "./pages/About";
 
 
 
@@ -19,14 +20,20 @@ function App() {
         <Switch>
           <Route path="/project/:id​">
             <ProjectPage />
-          
           </Route>
+
           <Route path="/Login">
             <LoginPage />
           </Route>
-          <Route path="/SignUp">
+
+          <Route path="SignUpPage">
             <SignUpPage />
           </Route>
+
+          <Route path="/About">
+            <About />
+          </Route>
+
           <Route path="/">
             <HomePage />
           </Route>

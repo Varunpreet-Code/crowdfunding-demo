@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { useHistory } from "react-router-dom";
 
 function SignUpForm() {
@@ -39,10 +40,9 @@ function SignUpForm() {
         history.push("/");
 
       });
-      .catch((error) => {
-        alert("username taken");
+      
 
-      });
+      
     }
   };
 
