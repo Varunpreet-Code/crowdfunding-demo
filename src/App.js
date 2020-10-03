@@ -4,7 +4,6 @@ import "./App.css";
 import HomePage from './pages/HomePage';
 import ProjectPage from './pages/ProjectPage';
 import Nav from './components/Nav/Nav';
-import ProjectCard from './components/ProjectCard/ProjectCard';
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import About from "./pages/About";
