@@ -1,88 +1,80 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
+import {Link, useHistory} from "react-router-dom";
 
-import { useHistory } from "react-router-dom";
 
-function SignUpForm() {
-  // variables
-  const [credentials, setCredentials] = useState({
-    username: "",
-    password: "",
-  });
- const history = useHistory();
-  //methods
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setCredentials((prevCredentials) => ({
-      ...prevCredentials,
-      [id]: value,
-    }));
-  };
 
-  const postData = async () => {
-    const response = await fetch(
-      `${process.env.REACT_APP_API_URL}api-token-auth/`,
-      {
-        method: "post",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(credentials),
-      }
+function SignUpForm(props){
+    //variables
+    const[credentials,setCredentials] = useState({
+        username: "",
+        email: "",
+        password: "",
+    });
+
+    const history = useHistory();
+
+    //methods
+    //set state
+    const handleChange = (e)=> {
+        const {id, value} = e.target;
+        setCredentials((prevCredentials) => ({
+            ...prevCredentials,
+            [id]: value,
+        }));
+    };
+
+
+   
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if(credentials.password == credentials.confirmPassword){
+            handleChange().then((response)=> {
+                //window.localStorage.setItem("signup", response.username);
+              // setStorage("signup",response.username);
+              // history.push("/");
+            });
+        }else{
+            props.showError('Passwords do not match');
+        }
+    };
+
+    //template
+    return(
+        <form className = "sign-up">
+            <h1>Sign Up</h1>
+            <hr />
+            <div className = "field">
+                <label htmlFor="username">Username: </label>
+                <input className = "input" type="text" 
+                id="username" 
+                placeholder="Enter username" 
+                onChange = {handleChange}/>
+            </div>
+            <div className = "field">
+            <label htmlFor="email">Email: </label>
+                <input className = "input" type="email" 
+                id="email" 
+                placeholder="Enter email" 
+                onChange = {handleChange}/>
+            </div>
+            <div className = "field">
+            <label htmlFor="password">Password: </label>
+                <input className = "input" type="password" 
+                id="password" 
+                placeholder="Enter password" 
+                onChange = {handleChange}/>
+            </div>
+            <div  className="in-out">
+                <label > Already have an account? </label>
+                <Link  to="/login/">  Login </Link>
+            </div>
+            <hr />
+            <button className = "submit-button" type="submit" 
+            onClick={handleSubmit}>
+                Sign Up
+            </button>
+        </form>
     );
-    return response.json();
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (credentials.username && credentials.password) {
-      postData().then((response) => {
-        window.localStorage.setItem("token", response.token);
-        history.push("/");
-
-      });
-      
-
-      
-    }
-  };
-
-  
-  return (
-    <form>
-      <div>
-        <label htmlFor="username">Username:</label>
-        <input
-          type="text"
-          id="username"
-          placeholder="Enter username"
-          onChange={handleChange}
-        />
-      </div>
-
-      <div>
-        <label htmlFor="Email">Email:</label>
-        <input
-          type="text"
-          id="emailaddress"
-          placeholder="Enter email "
-          onChange={handleChange}
-        />
-      </div>
-      <div>
-        <label htmlFor="password">password:</label>
-        <input
-          type="password"
-          id="password"
-          placeholder="Enter password"
-          onChange={handleChange}
-        />
-      </div>
-      
-      <button type="submit" onClick={handleSubmit}>
-        SignUp
-      </button>
-    </form>
-  );
 }
 
 export default SignUpForm;

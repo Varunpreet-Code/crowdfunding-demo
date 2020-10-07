@@ -12,6 +12,7 @@ import About from "./pages/About";
 
 function App() {
   return (
+
     <Router>
       <div>
         < Nav/>
@@ -19,6 +20,10 @@ function App() {
         <Switch>
           <Route path="/project/:id​">
             <ProjectPage />
+          </Route>
+
+          <Route path="/About">
+            <About />
           </Route>
 
           <Route path="/Login">
@@ -29,9 +34,7 @@ function App() {
             <SignUpPage />
           </Route>
 
-          <Route path="/About">
-            <About />
-          </Route>
+          
 
           <Route path="/">
             <HomePage />
