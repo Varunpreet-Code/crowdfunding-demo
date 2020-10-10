@@ -17,6 +17,7 @@ function App() {
         < Nav/>
 
         <Switch>
+          
           <Route path="/project/:id​">
             <ProjectPage />
           </Route>

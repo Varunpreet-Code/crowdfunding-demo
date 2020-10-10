@@ -5,4 +5,19 @@ nav {
     text-align: center;
     margin: 10px;
     background-color:lightskyblue;
+    margin-block-end: inherit;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.nav-text {
+    padding:50px;
+    text-decoration: mediumpurple;
+    font-size: 2rem;
+    font-weight: 200;
+    font-style: inherit;
+    display: inline;
+    justify-content: space-between;
+    vertical-align: middle;
+
 }

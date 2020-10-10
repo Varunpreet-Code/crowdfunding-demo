@@ -68,8 +68,11 @@ body {
   text-decoration-color: mediumaquamarine;
 }
 
-.home-img {
+.home-image {
   width: 1000;
+  padding: 20px;
+  align-content: center;
+
 }
 
  
