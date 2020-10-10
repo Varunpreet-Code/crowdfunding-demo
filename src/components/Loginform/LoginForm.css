@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css);
+
+
+.login {
+    top: 300px;
+    left: 60%;
+    margin-top: 200;
+    padding-top: 20px;
+    background-color: rgb(163, 145, 149);
+    height: 600px;
+    width: 1530px;
+    text-align: center;
+    border-radius: 2px;
+    visibility: .5s ease-in .5s;
+
+}
+.enterdetails {
+
+    margin: 20px;
+    text-align: center;
+    additive-symbols: -o-linear-gradient();
+
+}
+
+.account {
+
+    text-decoration: teal;
+    text-align: center;
+    text-decoration-color: thistle;
+}
+

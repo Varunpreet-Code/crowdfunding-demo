@@ -1,3 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css);
+
+
+
+
+body {
+  background-color:white;
+  background-image: -moz-element();
+}
+
+
+
+
 .App {
   text-align: center;
 }
@@ -44,6 +58,19 @@
   column-gap: 10px;
   row-gap: 10px;
  }
+
+.home-content {
+  background-color:lightgrey;
+  padding: 10px;
+  width: 1000;
+  height: 2000;
+  text-size-adjust: bold;
+  text-decoration-color: mediumaquamarine;
+}
+
+.home-img {
+  width: 1000;
+}
 
  
  

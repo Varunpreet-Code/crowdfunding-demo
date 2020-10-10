@@ -9,6 +9,7 @@ function SignUpForm(props){
         username: "",
         email: "",
         password: "",
+        location: "",
     });
 
     const history = useHistory();

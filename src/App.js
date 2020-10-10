@@ -6,7 +6,6 @@ import ProjectPage from './pages/ProjectPage';
 import Nav from './components/Nav/Nav';
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
-import About from "./pages/About";
 
 
 
@@ -22,15 +21,11 @@ function App() {
             <ProjectPage />
           </Route>
 
-          <Route path="/About">
-            <About />
-          </Route>
-
-          <Route path="/Login">
+          <Route path="/Login/">
             <LoginPage />
           </Route>
 
-          <Route path="SignUpPage">
+          <Route path="/SignUpPage/">
             <SignUpPage />
           </Route>
 
